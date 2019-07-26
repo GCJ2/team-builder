@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from 'react-router-dom'
 
 const TeamCard = (props) => {
 
@@ -11,7 +11,7 @@ const TeamCard = (props) => {
       <p>Name: {person.name}</p>
       <p>Email: {person.email}</p>
       <p>Role: {person.role}</p>
-      <button className="edit-button">Edit</button>
+      <Link to={`/edit/${person.id}`}>Edit</Link>
     </div>
   );
 };
